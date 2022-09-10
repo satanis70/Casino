@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TableActivity"
+    android:background="@drawable/splash">
+
+  <TextView
+      android:id="@+id/textView"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="40dp"
+      android:gravity="center"
+      android:text="Таблицы"
+      android:textAllCaps="true"
+      android:textColor="@color/white"
+      android:textStyle="bold"
+      android:textSize="40sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+  </TextView>
+
+  <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/buttonRussia"
+      android:layout_width="match_parent"
+      android:layout_height="100dp"
+      android:layout_marginStart="20dp"
+      android:layout_marginTop="80dp"
+      android:textColor="@color/white"
+      android:layout_marginEnd="20dp"
+      android:background="@drawable/roundedbutton"
+      android:backgroundTint="#FF5722"
+      android:text="Россия"
+      app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+  <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/buttonEngland"
+      android:layout_width="match_parent"
+      android:layout_height="100dp"
+      android:layout_marginStart="20dp"
+      android:textColor="@color/white"
+      android:layout_marginTop="20dp"
+      android:layout_marginEnd="20dp"
+      android:background="@drawable/roundedbutton"
+      android:backgroundTint="#FF5722"
+      android:text="Англия"
+      app:layout_constraintTop_toBottomOf="@+id/buttonRussia" />
+
+  <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/buttonGermany"
+      android:layout_width="match_parent"
+      android:layout_height="100dp"
+      android:layout_marginStart="20dp"
+      android:layout_marginTop="20dp"
+      android:textColor="@color/white"
+      android:layout_marginEnd="20dp"
+      android:background="@drawable/roundedbutton"
+      android:backgroundTint="#FF5722"
+      android:text="Германия"
+      app:layout_constraintTop_toBottomOf="@+id/buttonEngland" />
+
+  <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/buttonEspana"
+      android:layout_width="match_parent"
+      android:layout_height="100dp"
+      android:textColor="@color/white"
+      android:layout_marginStart="20dp"
+      android:layout_marginTop="20dp"
+      android:layout_marginEnd="20dp"
+      android:background="@drawable/roundedbutton"
+      android:backgroundTint="#FF5722"
+      android:text="Испания"
+      app:layout_constraintTop_toBottomOf="@+id/buttonGermany"
+      tools:layout_editor_absoluteX="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
