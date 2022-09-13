@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/textView_number_team"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_weight="2"
+                android:text="1"
+                android:textSize="14sp"></TextView>
+
+            <TextView
+                android:id="@+id/textView_name_team"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="Манчестер Юнайтед"
+                android:layout_weight="7"
+                android:textSize="14sp"></TextView>
+
+            <TextView
+                android:id="@+id/textViewI"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:gravity="center"
+                android:text="17"
+                android:layout_weight="2"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/textViewV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:layout_marginStart="20dp"
+                android:text="11"
+                android:textSize="14sp"></TextView>
+
+            <TextView
+                android:id="@+id/textViewN"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:layout_marginStart="20dp"
+                android:text="3"
+                android:textSize="14sp"></TextView>
+
+            <TextView
+                android:id="@+id/textViewP"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:layout_marginStart="20dp"
+                android:text="3"
+                android:textSize="14sp"></TextView>
+
+            <TextView
+                android:id="@+id/textView_balls"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="34-24"
+                android:textSize="14sp"></TextView>
+
+            <TextView
+                android:id="@+id/textViewO"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="6dp"
+                android:layout_weight="3"
+                android:text="70,6"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"></TextView>
+
+        </TableRow>
+    </TableLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

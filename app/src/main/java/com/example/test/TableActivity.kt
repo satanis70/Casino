@@ -3,13 +3,9 @@ package com.example.test
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
-import android.widget.Toast
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.test.model.Data
-import com.example.test.model.MatchItem
+import com.example.test.api.ApiRequestTable
+import com.example.test.model.tableModel.Datum
 import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -17,7 +13,6 @@ import kotlinx.coroutines.launch
 import retrofit2.Retrofit
 import retrofit2.awaitResponse
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.create
 import java.io.Serializable
 
 class TableActivity : AppCompatActivity(), Serializable {
@@ -44,25 +39,49 @@ class TableActivity : AppCompatActivity(), Serializable {
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
-            .create(ApiRequest::class.java)
-        val arrayRussia = ArrayList<MatchItem>()
-        val arrayEngland = ArrayList<MatchItem>()
-        val arrayGermany = ArrayList<MatchItem>()
-        val arrayEspana = ArrayList<MatchItem>()
+            .create(ApiRequestTable::class.java)
+
+        val arrayEngland = ArrayList<Datum>()
+        val arrayGermany = ArrayList<Datum>()
+        val arrayEspana = ArrayList<Datum>()
+        val arrayRussia = ArrayList<Datum>()
         GlobalScope.launch(Dispatchers.IO) {
             val response = api.getMatches().awaitResponse()
             if (response.isSuccessful){
                 val data = response.body()!!
-                for(i in data.indices){
-                    Log.i("Country", data[i].name)
-                    if (data[i].name=="Россия - Премьер-Лига"){
-                        arrayRussia.add(data[i])
-                    }
+                //Log.i("country", data.toString())
+                for (i in data[0].data.values){
+                    arrayEngland.add(i)
                 }
+                for (i in data[1].data.values){
+                    arrayRussia.add(i)
+                }
+                for (i in data[2].data.values){
+                    arrayEspana.add(i)
+                }
+                for (i in data[3].data.values){
+                    arrayGermany.add(i)
+                }
+
                 launch(Dispatchers.Main) {
                     russiaButton.setOnClickListener {
                         val intent = Intent(context, InfoTableActivity::class.java)
                         intent.putExtra("list", arrayRussia)
+                        startActivity(intent)
+                    }
+                    englandButton.setOnClickListener {
+                        val intent = Intent(context, InfoTableActivity::class.java)
+                        intent.putExtra("list", arrayEngland)
+                        startActivity(intent)
+                    }
+                    espanaButton.setOnClickListener {
+                        val intent = Intent(context, InfoTableActivity::class.java)
+                        intent.putExtra("list", arrayEspana)
+                        startActivity(intent)
+                    }
+                    germanyButton.setOnClickListener {
+                        val intent = Intent(context, InfoTableActivity::class.java)
+                        intent.putExtra("list", arrayGermany)
                         startActivity(intent)
                     }
                 }

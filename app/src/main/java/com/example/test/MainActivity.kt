@@ -16,11 +16,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val intent = Intent(this, TableActivity::class.java)
+        val intentTable = Intent(this, TableActivity::class.java)
         findViewById<Button>(R.id.buttonTable).setOnClickListener {
-            startActivity(intent)
+            startActivity(intentTable)
         }
-
+        val intentStats = Intent(this, StatsActivity::class.java)
+        findViewById<Button>(R.id.buttonStat).setOnClickListener {
+            startActivity(intentStats)
+        }
 
 
 
