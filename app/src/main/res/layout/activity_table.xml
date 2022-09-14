@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".TableActivity"
+    android:id="@+id/constraintLayout_Table"
     android:background="@drawable/splash">
 
   <TextView
@@ -16,66 +17,73 @@
       android:gravity="center"
       android:text="Таблицы"
       android:textAllCaps="true"
-      android:textColor="@color/white"
-      android:textStyle="bold"
       android:textSize="40sp"
+      android:textStyle="bold"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHorizontal_bias="0.0"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent">
-  </TextView>
+      app:layout_constraintTop_toTopOf="parent"></TextView>
 
-  <androidx.appcompat.widget.AppCompatButton
-      android:id="@+id/buttonRussia"
+  <androidx.constraintlayout.widget.ConstraintLayout
       android:layout_width="match_parent"
-      android:layout_height="100dp"
-      android:layout_marginStart="20dp"
-      android:layout_marginTop="80dp"
-      android:textColor="@color/white"
-      android:layout_marginEnd="20dp"
-      android:background="@drawable/roundedbutton"
-      android:backgroundTint="#FF5722"
-      android:text="Россия"
-      app:layout_constraintTop_toBottomOf="@+id/textView" />
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textView">
 
-  <androidx.appcompat.widget.AppCompatButton
-      android:id="@+id/buttonEngland"
-      android:layout_width="match_parent"
-      android:layout_height="100dp"
-      android:layout_marginStart="20dp"
-      android:textColor="@color/white"
-      android:layout_marginTop="20dp"
-      android:layout_marginEnd="20dp"
-      android:background="@drawable/roundedbutton"
-      android:backgroundTint="#FF5722"
-      android:text="Англия"
-      app:layout_constraintTop_toBottomOf="@+id/buttonRussia" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonRussia"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/roundedbutton"
+        android:backgroundTint="#FF5722"
+        android:text="Россия"
+        app:layout_constraintBottom_toTopOf="@+id/buttonEngland" />
 
-  <androidx.appcompat.widget.AppCompatButton
-      android:id="@+id/buttonGermany"
-      android:layout_width="match_parent"
-      android:layout_height="100dp"
-      android:layout_marginStart="20dp"
-      android:layout_marginTop="20dp"
-      android:textColor="@color/white"
-      android:layout_marginEnd="20dp"
-      android:background="@drawable/roundedbutton"
-      android:backgroundTint="#FF5722"
-      android:text="Германия"
-      app:layout_constraintTop_toBottomOf="@+id/buttonEngland" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonEngland"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/roundedbutton"
+        android:backgroundTint="#FF5722"
+        android:text="Англия"
+        app:layout_constraintBottom_toTopOf="@+id/buttonGermany" />
 
-  <androidx.appcompat.widget.AppCompatButton
-      android:id="@+id/buttonEspana"
-      android:layout_width="match_parent"
-      android:layout_height="100dp"
-      android:textColor="@color/white"
-      android:layout_marginStart="20dp"
-      android:layout_marginTop="20dp"
-      android:layout_marginEnd="20dp"
-      android:background="@drawable/roundedbutton"
-      android:backgroundTint="#FF5722"
-      android:text="Испания"
-      app:layout_constraintTop_toBottomOf="@+id/buttonGermany"
-      tools:layout_editor_absoluteX="16dp" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonGermany"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/roundedbutton"
+        android:backgroundTint="#FF5722"
+        android:text="Германия"
+        app:layout_constraintBottom_toTopOf="@+id/buttonEspana"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonEspana"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="56dp"
+        android:background="@drawable/roundedbutton"
+        android:backgroundTint="#FF5722"
+        android:text="Испания"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/image_view_news"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/testimage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+    <TextView
+        android:id="@+id/text_view_title_news"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text="«Сговор? А как вы сами думаете?» В нашем футболе новый скандал из-за переноса матча «Уфы»"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_view_news"></TextView>
+
+    <TextView
+        android:id="@+id/text_view_text_news"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text="В последнем туре РПЛ решалось многое: кто-то боролся за Лигу чемпионов, а кто-то — за право остаться в Премьер-Лиге. ЦСКА имел шансы пробиться в Лигу конференций — новый еврокубковый турнир под эгидой УЕФА. Для этого армейцам нужно было побеждать «Динамо», но с задачей они не справились (2:3).\n\n\nПо итогам сезона ЦСКА довольствовался только шестым местом и в еврокубки не попал. Такого с армейцами не случалось очень давно — 21 год. Вспоминаем, каким был мир и футбол в 2000 году, когда ЦСКА в прошлый раз пролетел мимо Европы."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_title_news"></TextView>
+
+    <TextView
+        android:id="@+id/text_view_date_news"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="17 мая 2021"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_text_news"></TextView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_date_news" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

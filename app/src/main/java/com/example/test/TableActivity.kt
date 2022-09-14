@@ -49,7 +49,6 @@ class TableActivity : AppCompatActivity(), Serializable {
             val response = api.getMatches().awaitResponse()
             if (response.isSuccessful){
                 val data = response.body()!!
-                //Log.i("country", data.toString())
                 for (i in data[0].data.values){
                     arrayEngland.add(i)
                 }

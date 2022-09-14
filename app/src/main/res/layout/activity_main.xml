@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/splash"
+    android:id="@+id/constraintLayout_Main"
     tools:context=".MainActivity">
 
 
@@ -29,7 +30,6 @@
         android:background="@drawable/roundedbutton"
         android:backgroundTint="#FF5722"
         android:text="Таблица"
-        android:textColor="@color/white"
         android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@+id/buttonNews"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,7 +46,6 @@
         android:background="@drawable/roundedbutton"
         android:backgroundTint="#FF5722"
         android:text="Новости"
-        android:textColor="@color/white"
         android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@+id/buttonStat"
         app:layout_constraintEnd_toEndOf="parent"
@@ -63,7 +62,6 @@
         android:background="@drawable/roundedbutton"
         android:backgroundTint="#FF5722"
         android:text="Статистика"
-        android:textColor="@color/white"
         android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@+id/buttonSettings"
         app:layout_constraintEnd_toEndOf="parent"
@@ -80,7 +78,6 @@
         android:background="@drawable/roundedbutton"
         android:backgroundTint="#FF5722"
         android:text="Настройки"
-        android:textColor="@color/white"
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

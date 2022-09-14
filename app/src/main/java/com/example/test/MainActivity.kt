@@ -24,6 +24,14 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.buttonStat).setOnClickListener {
             startActivity(intentStats)
         }
+        val intentNews = Intent(this, NewsActivity::class.java)
+        findViewById<Button>(R.id.buttonNews).setOnClickListener {
+            startActivity(intentNews)
+        }
+        val intentSettings = Intent(this, SettingsActivity::class.java)
+        findViewById<Button>(R.id.buttonSettings).setOnClickListener {
+            startActivity(intentSettings)
+        }
 
 
 
